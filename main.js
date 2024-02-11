@@ -193,12 +193,46 @@ const pintarFooter = () => {
 
   // funcion vaciar carrito
   const boton = document.querySelector('#vaciar-carrito')
+  
+  
+  // promesa mensaje
   boton.addEventListener('click', () => {
+  
+    Swal.fire({
+      title: "vaciar carrito de compra",
+      text: "¿Esta seguro que desea vaciar carrito de compra?",
+      icon: "warning",
+      confirmButtonText: "Si",
+      confirmButtonColor: "green",
+      showCancelButton: true,
+      cancelButtonText: "Cancelar",
+      cancelButtonColor: "red"
+    }).then( res => {
+     // verifica la accion de la promesa
+     if(res.isConfirmed){
+      console.log("confirmo vaciar carrito")
       
-    
-    
-      carrito = {}
-      pintarCarrito()
+      Swal.fire({
+        title: "Carrito vacio",
+        icon: "success",
+        
+      })
+
+  // funciones para vaciar el carrito
+  carrito = {}
+  pintarCarrito()
+
+     }
+     
+     if(res.isDismissed){
+      Swal.fire({title: "Seguir comprando"})
+      console.log("Carrito lleno")
+     }
+
+    })
+
+
+  
   })
 
 }
