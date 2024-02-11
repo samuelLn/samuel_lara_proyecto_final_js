@@ -19,8 +19,29 @@ function mensajeAgregarCarrito (){
 
 
 
+//promesas - mensaje vaciar carrito
 
-// element html
+function mensajeProductoEliminado (){
+
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 1000,
+    timerProgressBar: true,
+   });
+  Toast.fire({
+    icon: "success",
+    title: "Producto Elimininado"
+  });
+ 
+
+
+}
+
+
+
+// element html DOM
 const cards = document.getElementById('cards');
 const items = document.getElementById('items');
 const footer = document.getElementById('footer');
@@ -173,6 +194,9 @@ const pintarFooter = () => {
   // funcion vaciar carrito
   const boton = document.querySelector('#vaciar-carrito')
   boton.addEventListener('click', () => {
+      
+    
+    
       carrito = {}
       pintarCarrito()
   })
@@ -197,6 +221,7 @@ const btnAccion = e => {
     if(producto.cantidad === 0){
 
       delete carrito[e.target.dataset.id]
+      mensajeProductoEliminado()
     }
     pintarCarrito()
   }
