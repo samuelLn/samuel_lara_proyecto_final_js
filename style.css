@@ -94,3 +94,44 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+.tituloInicial {
+  color: red;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: -1px 1px 11px 3px #605e5e2b;
+}
+
+
+.btn-dark {
+  color: #fff;
+  background-color: #f16115;
+  border-color: #ffffff;
+}
+
+.card-img-top {
+
+  animation: rotacion_resplandor 35s infinite linear;
+}
+
+/*+=======================+
+ANIMACIONES CSS
++=======================+*/
+
+@keyframes rotacion_resplandor {
+  0%{ transform: rotate(0deg); }
+  100%{ transform: rotate(360deg);}
+}
+
+

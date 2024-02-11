@@ -1,3 +1,25 @@
+
+//Libreria Sweet Alert
+import Swal from "sweetalert2";
+
+function mensajeAgregarCarrito (){
+  
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 1000,
+    timerProgressBar: true,
+   });
+  Toast.fire({
+    icon: "success",
+    title: "Producto agregado"
+  });
+}
+
+
+
+
 // element html
 const cards = document.getElementById('cards');
 const items = document.getElementById('items');
@@ -14,6 +36,7 @@ let carrito = {}
 document.addEventListener('DOMContentLoaded', () => {
   fetchData();
 
+ //Condicional que verifica si hay datos en local storage 
   if (localStorage.getItem("carrito")){
     carrito = JSON.parse(localStorage.getItem("carrito"))
     pintarCarrito();
@@ -28,12 +51,12 @@ cards.addEventListener("click", (e) => {
   addCarrito(e)
 })
 
-
+// evento sumar productos
 items.addEventListener ("click", e => { 
   btnAccion(e)
 })
 
-//consumo api local
+//consumo api local asyn 
 const fetchData = async () => {
 
     try {
@@ -48,7 +71,7 @@ const fetchData = async () => {
 
 }
 
-
+//pinta las tarjetas de los productos en el front
 const pintarCards = data => {
   data.forEach(producto => {
     const clone = templateCard.cloneNode(true);
@@ -95,6 +118,7 @@ if (carrito.hasOwnProperty(producto.id)){
 carrito[producto.id] = {...producto}
 pintarCarrito();
 console.log(carrito);
+mensajeAgregarCarrito();
 
 }
 
@@ -117,7 +141,7 @@ items.innerHTML = ""
 
   items.appendChild(fragment)
   pintarFooter()
-
+   // funcion que guarda el carrito en local storage
   localStorage.setItem("carrito", JSON.stringify(carrito))
 }
 
@@ -126,7 +150,7 @@ const pintarFooter = () => {
   footer.innerHTML = " "
   if (Object.keys(carrito).length === 0){
     footer.innerHTML =  `
-    <th scope="row" colspan="5">Carrito vacío con innerHTML</th>
+    <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
     `
     return
   }

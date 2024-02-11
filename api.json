@@ -1,39 +1,39 @@
 [
     {
-      "precio": 500,
+      "precio": 2500,
       "id": 1,
-      "title": "Café",
-      "thumbnailUrl": "https://picsum.photos/id/0/600"
+      "title": "PIZZA MARGARITA",
+      "thumbnailUrl": "./img/pizza-5.png"
     },
     {
-      "precio": 300,
+      "precio": 3000,
       "id": 2,
-      "title": "Pizza",
-      "thumbnailUrl": "https://picsum.photos/id/10/600"
+      "title": "PIZZA ESPAÑOLA",
+      "thumbnailUrl": "./img/pizza3.png"
     },
     {
-      "precio": 100,
+      "precio": 3000,
       "id": 3,
-      "title": "Agua",
-      "thumbnailUrl": "https://picsum.photos/id/20/600"
+      "title": "PIZZA NAPOLITA",
+      "thumbnailUrl": "./img/pizza4.png"
     },
     {
-      "precio": 50,
+      "precio": 3500,
       "id": 4,
-      "title": "Sandía",
-      "thumbnailUrl": "https://picsum.photos/id/30/600"
+      "title": "PIZZA MARGARITA - EXTRA",
+      "thumbnailUrl": "./img/pizza-5.png"
     },
     {
-      "precio": 10,
+      "precio": 4000,
       "id": 5,
-      "title": "Mango",
-      "thumbnailUrl": "https://picsum.photos/id/40/600"
+      "title": "PIZZA ESPAÑOLA - EXTRA",
+      "thumbnailUrl": "./img/pizza4.png"
     },
     {
-      "precio": 150,
+      "precio": 4500,
       "id": 6,
-      "title": "Chela",
-      "thumbnailUrl": "https://picsum.photos/id/50/600"
+      "title": "PIZZA ESPAÑOLA - EXTRA",
+      "thumbnailUrl": "./img/pizza3.png"
     }
   ]
 

@@ -11,11 +11,13 @@
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
     crossorigin="anonymous"
   />
+
+  <link rel="stylesheet" href="style.css">
   </head> 
-  <body>
+  <body style="background-color: #ffb936;">
     
     <div class="container">
-      <h1>Carrito de compra</h1>
+      <h1 class="tituloInicial">Carrito de compra - PIZZERIA</h1>
       
       <table class="table">
         <thead>
@@ -71,8 +73,8 @@
 
   <template id="template-card">
     <div class="col-12 mb-2 col-md-4">
-      <div class="card">
-        <div class="card-body">
+      <div class="card"> 
+        <div class="card-body" style="text-align: center;">
           <img src="" alt="" class="card-img-top">
           <h5>Titulo</h5>
           <p>precio</p>
@@ -89,6 +91,6 @@
 
 
 
-    <script  src="main.js"></script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
